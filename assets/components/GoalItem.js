@@ -1,15 +1,12 @@
 import { View, TextInput, Button, StyleSheet } from "react-native"
 
-
-function GoalInput({itemData,onDeleteItem, id}){
-
+function GoalItem({itemData,onDeleteItem, id}){
 
     function handleInputGoal(){
         console.log(id)
         setEnteredGoalText(enteredText)
         console.log('addGoalHandler')
     }
-
 
     return(
         <Pressamble onPress={deleteGoalHandler}>
@@ -19,8 +16,7 @@ function GoalInput({itemData,onDeleteItem, id}){
         </Pressamble>
     )
 }
-export default GoalInput
-
+export default GoalItem
 
 const styles = StyleSheet.create({
     goalsItem: {

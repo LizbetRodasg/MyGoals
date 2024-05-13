@@ -1,7 +1,4 @@
-import { useState } from 'react'
-import { Button, StyleSheet, Text, TextInput, View, ScrollView, FlatList } from 'react-native';
-import GoalInput from './components/Goallnput';
-import GoalItem from './components/Goalltem';
+from './components/GoalItem';
 
 
 
@@ -30,8 +27,11 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      {/* <View style={styles.inputContainer}>
-        <TextInput
+      {/* <View style={styles.inputContainer}>|
+        <TextInputimport { useState } from 'react'
+import { Button, StyleSheet, Text, TextInput, View, ScrollView, FlatList } from 'react-native';
+import GoalInput from './components/Goallnput';
+import GoalItem
           style={styles.textInput}
           placeholder='Your Goal!'
           onChangeText={handleInputGoal}
@@ -103,5 +103,3 @@ const styles = StyleSheet.create({
     flex: 5
   },
 });
-
-

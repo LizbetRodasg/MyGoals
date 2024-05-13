@@ -1,9 +1,14 @@
+
 import { useState } from "react";
 import { View, TextInput, Button, StyleSheet } from "react-native"
 
 
+
+
 function GoalInput({onADDGoal}){
     const [enteredGoalText, setEnteredGoalText]=useState('')
+
+
 
 
     function handleInputGoal(enteredText){
@@ -12,11 +17,15 @@ function GoalInput({onADDGoal}){
     }
 
 
+
+
     function addGoalHandler(){
         onADDGoal(enteredGoalText)
         setEnteredGoalText('')
         console.log('addGoalHandler')
     }
+
+
 
 
     return(
@@ -36,10 +45,16 @@ function GoalInput({onADDGoal}){
     )
 
 
+
+
 }
 
 
+
+
 export default GoalInput
+
+
 
 
 const styles = StyleSheet.create({
@@ -61,3 +76,32 @@ const styles = StyleSheet.create({
         borderRadius: 5
     }
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
