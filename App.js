@@ -1,7 +1,7 @@
-from './components/GoalItem';
-
-
-
+import { useState } from 'react'
+import { Button, StyleSheet, Text, TextInput, View, ScrollView, FlatList } from 'react-native';
+import GoalItem from './components/GoalItem';
+import GoalInput from './components/GoalInput';
 
 export default function App() {
   const [goals, setGoals] = useState([])
@@ -15,29 +15,23 @@ export default function App() {
     console.log('handleAddGoal')
   }
 
-
   function handleDeleteGoal(id){
     console.log('DELETE')
-                  const deleteGoal = goals.filter((goal) => {return goal.key !==id} )
+    const deleteGoal = goals.filter((goal) => {return goal.key !== id} )
     setGoals(deleteGoal)
   }
 
-
-
-
+  
   return (
     <View style={styles.container}>
-      {/* <View style={styles.inputContainer}>|
-        <TextInputimport { useState } from 'react'
-import { Button, StyleSheet, Text, TextInput, View, ScrollView, FlatList } from 'react-native';
-import GoalInput from './components/Goallnput';
-import GoalItem
-          style={styles.textInput}
+      {/* <View style={styles.inputContainer}>
+        <TextInput 
+          style={styles.textInput} 
           placeholder='Your Goal!'
           onChangeText={handleInputGoal}
         />
-        <Button
-          title="Add Goal"
+        <Button 
+          title="Add Goal" 
           color={'#A3FFD6'}
           onPress={handleAddGoal}
         />
@@ -53,9 +47,9 @@ import GoalItem
               // <View style={styles.goalsItem} >
               //   <Text style={styles.goalText}>{itemData.item.text}</Text>
               // </View>
-              <GoalItem
+              <GoalItem 
                 itemData={itemData}
-                onDeleteItem={handleDeleteGoal}
+                onDeleteItem={handleDeleteGoal} 
                 id={itemData.item.key}
               />
             )
@@ -68,9 +62,6 @@ import GoalItem
     </View>
   );
 }
-
-
-
 
 const styles = StyleSheet.create({
   container: {
@@ -103,3 +94,5 @@ const styles = StyleSheet.create({
     flex: 5
   },
 });
+
+
